@@ -17,9 +17,15 @@ app.get("/", (req, res) => {
 });
 
 //Routes
+//app.use("/auth", require("./api/routes/authRoute"));
+app.use("/user", require("./api/routes/userRoute"));
 
 //Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI).
+mongoose.connect(process.env.MONGODB_URI,
+    {
+        dbName: process.env.MONGODB_DB,
+    }
+).
 then(() => {
     console.log("MongoDB Connected");
     app.listen(process.env.PORT, () => {
