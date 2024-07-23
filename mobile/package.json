@@ -1,17 +1,17 @@
 {
-  "name": "backend_web",
+  "name": "backend_mobile",
   "version": "1.0.0",
-  "description": "backend for web app",
+  "description": "backend for mobile app",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "PPK Ormawa HMGP",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "googleapis": "^140.0.1",
