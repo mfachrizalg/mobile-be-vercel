@@ -11,8 +11,8 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
     try {
-        console.log("PPK Ormawa HMGP API");
-        res.status(200).send("PPK Ormawa HMGP API");
+        console.log("PPK Ormawa HMGP Web API");
+        res.status(200).send("PPK Ormawa HMGP Web API");
     } catch (error) {
         console.error(error);
         res.status(500).send(error);
