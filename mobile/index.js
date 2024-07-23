@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const connectDB = require("./api/config/connectDB");
+const mongoose = require("mongoose");
 const app = express();
 
 // Express body parser
@@ -17,11 +17,15 @@ app.get("/", (req, res) => {
 });
 
 //Routes
-app.use("/api/berita", require("./api/routes/beritaRoute"));
 
 //Connect to MongoDB
-connectDB;
-if (connectDB) 
+mongoose.connect(process.env.MONGODB_URI).
+then(() => {
+    console.log("MongoDB Connected");
     app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+        console.log(`Server is running on port ${process.env.PORT}`);
+    });
+}).catch((err) => {
+    console.error(err);
+    process.exit(1);
 });
