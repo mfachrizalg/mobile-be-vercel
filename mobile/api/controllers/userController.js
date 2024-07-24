@@ -18,3 +18,11 @@ exports.registerUser = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+exports.getData = async (req, res) => {
+    try {
+        res.status(200).json({msg: "hallo world"})
+    } catch (error) {
+        res.status(500).json(error.message)
+    }
+}
