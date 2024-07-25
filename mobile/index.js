@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 //Routes
-//app.use("/auth", require("./api/routes/authRoute"));
+app.use("/auth", require("./api/routes/authRoute"));
 app.use("/user", require("./api/routes/userRoute"));
 
 //Connect to MongoDB
