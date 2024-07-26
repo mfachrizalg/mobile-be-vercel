@@ -22,10 +22,23 @@ exports.login = async (req, res) => {
             }, 
             process.env.ACCESS_TOKEN_SECRET,
             { 
-                expiresIn: "1m",
+                expiresIn: "5m",
                 issuer : process.env.TOKEN_ISSUER
             }
         );
+
+        // const refreshToken = jwt.sign(
+        //     { 
+        //         _id: foundUser._id,
+        //         username: foundUser.username,
+        //         role: foundUser.role
+        //     }, 
+        //     process.env.REFRESH_TOKEN_SECRET,
+        //     { 
+        //         expiresIn: "1d",
+        //         issuer : process.env.TOKEN_ISSUER
+        //     }
+        // );
         //coba
         res.status(200).json({ token });
     }
@@ -36,10 +49,10 @@ exports.login = async (req, res) => {
 
 exports.validateToken = async (req, res) => {
     try {
-        const token = req.header("Authorization");
-        if (!token) return res.status(400).json({ message: "Access Denied" });
+        const token = req.header(process.env.TOKEN_HEADER);
+        if (!token) return res.status(401).json({ message: "Access Denied" });
         jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-            if (err) return res.status(400).json({ message: "Invalid Token" });
+            if (err) return res.status(401).json({ message: "Invalid Token" });
             res.status(200).json({ message: "Valid Token" });
         });
     }
