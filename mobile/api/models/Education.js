@@ -6,16 +6,14 @@ const EducationSchema = new mongoose.Schema({
         required: true
     },
     content : {
-        type: String,
-        required: true
+        type: String
     },
     synopsis: {
-        type: String,
-        required: true
+        type: String
     },
     date : {
-        type : String,
-        required : true
+        type : Date,
+        default : Date.now,
     },
     image : {
         type: String
