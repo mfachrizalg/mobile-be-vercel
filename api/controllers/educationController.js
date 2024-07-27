@@ -1,17 +1,17 @@
 const Education = require("../models/Education");
 
-exports.createEducatio = async (req, res) => {
-    try {
-        const { title, content, synopsis } = req.body;
-        if (!title || !content || !synopsis) return res.status(400).json({ message: "Please fill all fields" });
-        const newEducation = new Education({ title, content, synopsis });
-        await newEducation.save();
-        res.status(201).json({ message: "Education created successfully" });
-    }
-    catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-}
+// exports.createEducatio = async (req, res) => {
+//     try {
+//         const { title, content, synopsis } = req.body;
+//         if (!title || !content || !synopsis) return res.status(400).json({ message: "Please fill all fields" });
+//         const newEducation = new Education({ title, content, synopsis });
+//         await newEducation.save();
+//         res.status(201).json({ message: "Education created successfully" });
+//     }
+//     catch (error) {
+//         res.status(500).json({ message: error.message });
+//     }
+// }
 
 exports.getAllEducation = async (req, res) => {
     try {
