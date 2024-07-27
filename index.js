@@ -1,7 +1,4 @@
-require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
-const app = express();
+
 
 // Express body parser
 app.use(express.json());
@@ -14,7 +11,7 @@ app.get("/", (req, res) => {
         console.error(error);
         res.status(500).send(error);
     }
-};
+});
 
 //Routes
 app.use("/auth", require("./api/routes/authRoute"));
