@@ -1,18 +1,15 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
 const app = express();
 
-//Prevent CORS errors
-app.use(cors({ credentials: true, origin: true }));
 // Express body parser
 app.use(express.json());
 
 app.get("/", (req, res) => {
     try {
-        console.log("PPK Ormawa HMGP Web API");
-        res.status(200).send("PPK Ormawa HMGP Web API");
+        console.log("PPK Ormawa HMGP Mobile API");
+        res.status(200).send("PPK Ormawa HMGP Mobile API");
     } catch (error) {
         console.error(error);
         res.status(500).send(error);
@@ -20,13 +17,20 @@ app.get("/", (req, res) => {
 });
 
 //Routes
-app.use("/api/berita", require("./api/routes/beritaRoute"));
+app.use("/auth", require("./api/routes/authRoute"));
+app.use("/user", require("./api/routes/userRoute"));
+app.use("/education", require("./api/routes/educationRoute"));
+app.use("/anorganik", require("./api/routes/anorganikRoute"));
 
 //Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI).
+mongoose.connect(process.env.MONGODB_URI,
+    {
+        dbName: process.env.MONGODB_DB,
+    }
+).
 then(() => {
     console.log("MongoDB Connected");
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT,"0.0.0.0", () => {
         console.log(`Server is running on port ${process.env.PORT}`);
     });
 }).catch((err) => {
