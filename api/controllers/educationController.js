@@ -1,6 +1,6 @@
 const Education = require("../models/Education");
 
-exports.createEducation = async (req, res) => {
+exports.createEducatio = async (req, res) => {
     try {
         const { title, content, synopsis } = req.body;
         if (!title || !content || !synopsis) return res.status(400).json({ message: "Please fill all fields" });
