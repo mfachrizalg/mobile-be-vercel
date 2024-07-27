@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
         console.error(error);
         res.status(500).send(error);
     }
-});
+};
 
 //Routes
 app.use("/auth", require("./api/routes/authRoute"));
