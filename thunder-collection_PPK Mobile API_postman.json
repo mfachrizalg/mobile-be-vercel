@@ -1,0 +1,579 @@
+{
+    "info": {
+        "_postman_id": "a4b016ec-85d9-43c7-8107-b2204d837c87",
+        "name": "PPK Mobile API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "User",
+            "item": [
+                {
+                    "name": "registerUser",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/user/",
+                            "path": [
+                                "user"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\" : \"testanorganikbaru\",\n  \"fullname\" : \"Test Anorganik Baru\",\n  \"phoneNumber\" : \"081523556712\",\n  \"password\" : \"testanorganikbaru\",\n  \"bankSampah\" : \"Bank Sampah 1\",\n  \"role\" : \"Anorganik\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "getUser",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/user/66a7a21def2113908c9c7843",
+                            "path": [
+                                "user",
+                                "66a7a21def2113908c9c7843"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        }
+                    }
+                },
+                {
+                    "name": "updateUser",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "localhost:5500/user/",
+                            "path": [
+                                "user"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTIxZGVmMjExMzkwOGM5Yzc4NDMiLCJ1c2VybmFtZSI6InRlc3Rhbm9yZ2FuaWsiLCJyb2xlIjoiQW5vcmdhbmlrIiwiaWF0IjoxNzIyNDI4NDk5LCJleHAiOjE3MjI0MzIwOTksImlzcyI6IlBQS08tT3JtYXdhLU1vYmlsZSJ9.mka33qOSrp-RR8WN33KB1Z3jqsLeRddDjjZwwuxKD78"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\" : \"testanorganik\",\n  \"fullname\" : \"test Anorganik\",\n  \"phoneNumber\" : \"0812125\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "loadUser",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/user",
+                            "path": [
+                                "user"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTI0MGVmMjExMzkwOGM5Yzc4NGIiLCJ1c2VybmFtZSI6InRlc3RvcmdhbmlrIiwicm9sZSI6Ik9yZ2FuaWsiLCJpYXQiOjE3MjI0NDQ2NDIsImV4cCI6MTcyMjQ0ODI0MiwiaXNzIjoiUFBLTy1Pcm1hd2EtTW9iaWxlIn0.tkpmyXTbm0UlK98R8OKF6MK8WCx2JDgLbogeex7UFTc"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Dummy",
+            "item": [
+                {
+                    "name": "getAnorganik",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/dummy/anorganik",
+                            "path": [
+                                "dummy",
+                                "anorganik"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "loginAdmin-Anorganik",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/auth/",
+                            "path": [
+                                "auth"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\" : \"testadminanorganik\",\n  \"password\" : \"testadminanorganik\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "validateToken",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/auth/validate",
+                            "path": [
+                                "auth",
+                                "validate"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTI0MGVmMjExMzkwOGM5Yzc4NGIiLCJ1c2VybmFtZSI6InRlc3RvcmdhbmlrIiwicm9sZSI6Ik9yZ2FuaWsiLCJpYXQiOjE3MjIyNjMxMzUsImV4cCI6MTcyMjI2NjczNSwiaXNzIjoiUFBLTy1Pcm1hd2EtTW9iaWxlIn0.RNxROUo7dk3KqYckXwH2kyHvoPDH_D1V3kEZPpj9vZk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "loginAdmin-Organik",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/auth/",
+                            "path": [
+                                "auth"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\" : \"testadminorganik\",\n  \"password\" : \"testadminorganik\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "loginOrganik",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/auth/",
+                            "path": [
+                                "auth"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\" : \"testorganik\",\n  \"password\" : \"testorganik\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "loginAnorganik",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/auth/",
+                            "path": [
+                                "auth"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\" : \"testanorganikbaru\",\n  \"password\" : \"testanorganikbaru\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Education",
+            "item": [
+                {
+                    "name": "getAllEducation",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/education/",
+                            "path": [
+                                "education"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        }
+                    }
+                },
+                {
+                    "name": "getOneEducation",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/education/2",
+                            "path": [
+                                "education",
+                                "2"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        }
+                    }
+                },
+                {
+                    "name": "createEducation",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/education",
+                            "path": [
+                                "education"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmEzOGNhNTE0YmUzMzIyOGU5YmVhNzYiLCJ1c2VybmFtZSI6InRlc3RjbGllbnQiLCJyb2xlIjoiQ2xpZW50IiwiaWF0IjoxNzIyMDc0MTYyLCJleHAiOjE3MjIwNzQ0NjIsImlzcyI6IlBQS08tT3JtYXdhLU1vYmlsZSJ9.Nnd3tmNphhuwBpANRkurTKUZMeFrZDA2H9lOn_psPKk"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\" : \"Title Serial 6\",\n  \"content\" : \"Content Serial 6\",\n  \"synopsis\" : \"Synopsis Serial 6\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "updateEducation",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "localhost:5500/education/66a39633db7a35e2f13257ed",
+                            "path": [
+                                "education",
+                                "66a39633db7a35e2f13257ed"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmEzOGMzMjE0YmUzMzIyOGU5YmVhNmEiLCJ1c2VybmFtZSI6InRlc3RhZG1pbm9yZ2FuaWsiLCJyb2xlIjoiQWRtaW4tT3JnYW5payIsImlhdCI6MTcyMTk5ODA2NSwiZXhwIjoxNzIxOTk4MzY1LCJpc3MiOiJQUEtPLU9ybWF3YS1Nb2JpbGUifQ.8XvGq66LRHs_aHSddSdqBdHlNd7DgJ0GgNpv40cYF7Q"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\" : \"Updated Title 1\",\n  \"content\" : \"Updated Content 1\",\n  \"synopsis\" : \"Updated Synopsis 1\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "deleteEducation",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "localhost:5500/education/66a38ee789ac7d6b725081e4",
+                            "path": [
+                                "education",
+                                "66a38ee789ac7d6b725081e4"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmEzOGMzMjE0YmUzMzIyOGU5YmVhNmEiLCJ1c2VybmFtZSI6InRlc3RhZG1pbm9yZ2FuaWsiLCJyb2xlIjoiQWRtaW4tT3JnYW5payIsImlhdCI6MTcyMTk5NjYwNywiZXhwIjoxNzIxOTk2OTA3LCJpc3MiOiJQUEtPLU9ybWF3YS1Nb2JpbGUifQ.SZkJci1Oof3d9kDYrFcAFqkYOlUIJHOpyV_Oz-cpb8M"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Anorganik",
+            "item": [
+                {
+                    "name": "createAnorganik",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:5500/anorganik/66a7a21def2113908c9c7843",
+                            "path": [
+                                "anorganik",
+                                "66a7a21def2113908c9c7843"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTI3NGVmMjExMzkwOGM5Yzc4NWEiLCJ1c2VybmFtZSI6InRlc3RhZG1pbmFub3JnYW5payIsInJvbGUiOiJBZG1pbi1Bbm9yZ2FuaWsiLCJpYXQiOjE3MjIyNjMyNTIsImV4cCI6MTcyMjI2Njg1MiwiaXNzIjoiUFBLTy1Pcm1hd2EtTW9iaWxlIn0.lxhWy1WlahDwoaAhMRpJqRjfGlDeIGTeFx1cd1sNbWo"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "[\n  {\n   \"type\" : \"Plastik\",\n   \"description\" : \"Plastik Jenis B\",\n   \"mass\" : 2,\n   \"price\" : 2500\n  },\n  {\n   \"type\" : \"Kertas\",\n   \"description\" : \"Kertas Jenis C\",\n   \"mass\" : 1,\n   \"price\" : 5000\n  }\n]"
+                        }
+                    }
+                },
+                {
+                    "name": "riwayatAnorganik",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "https://mobile-be-vercel.vercel.app/anorganik/",
+                            "path": [
+                                "anorganik"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "mobile-be-vercel",
+                                "vercel",
+                                "app"
+                            ]
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTIxZGVmMjExMzkwOGM5Yzc4NDMiLCJ1c2VybmFtZSI6InRlc3Rhbm9yZ2FuaWsiLCJyb2xlIjoiQW5vcmdhbmlrIiwiaWF0IjoxNzIyNDM1NTE2LCJleHAiOjE3MjI0MzkxMTYsImlzcyI6IlBQS08tT3JtYXdhLU1vYmlsZSJ9.5zoT6HWLkOyOlsAe9AsQU96fcUPgj35lhzbasJFkbsM"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Notification",
+            "item": [
+                {
+                    "name": "getNotification",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/notification/",
+                            "path": [
+                                "notification"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTIxZGVmMjExMzkwOGM5Yzc4NDMiLCJ1c2VybmFtZSI6InRlc3Rhbm9yZ2FuaWsiLCJyb2xlIjoiQW5vcmdhbmlrIiwiaWF0IjoxNzIyMjY0NTg0LCJleHAiOjE3MjIyNjgxODQsImlzcyI6IlBQS08tT3JtYXdhLU1vYmlsZSJ9.TMIdhSPBdpOnz-OCn2K1R-CzXlGnr76Igpvg9VO6or8"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Bank Sampah",
+            "item": [
+                {
+                    "name": "getAllUsers",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/banksampah",
+                            "path": [
+                                "banksampah"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTI3NGVmMjExMzkwOGM5Yzc4NWEiLCJ1c2VybmFtZSI6InRlc3RhZG1pbmFub3JnYW5payIsInJvbGUiOiJBZG1pbi1Bbm9yZ2FuaWsiLCJpYXQiOjE3MjI0MzUxMjgsImV4cCI6MTcyMjQzODcyOCwiaXNzIjoiUFBLTy1Pcm1hd2EtTW9iaWxlIn0.F_zE3K2rvI7nXkn43UtSbjjc6SrnAwSuXDnJcbkyO2A"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "getAllUsersOrganik",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/banksampah/organik",
+                            "path": [
+                                "banksampah",
+                                "organik"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        }
+                    }
+                },
+                {
+                    "name": "getAllUsersAnorganik",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/banksampah/anorganik",
+                            "path": [
+                                "banksampah",
+                                "anorganik"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTI3NGVmMjExMzkwOGM5Yzc4NWEiLCJ1c2VybmFtZSI6InRlc3RhZG1pbmFub3JnYW5payIsInJvbGUiOiJBZG1pbi1Bbm9yZ2FuaWsiLCJpYXQiOjE3MjIyNzE1NzMsImV4cCI6MTcyMjI3NTE3MywiaXNzIjoiUFBLTy1Pcm1hd2EtTW9iaWxlIn0.PJcTWw4RrHhiENzel5cWI2yWy6fO2QWqwOqeg01RRt0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "getUser",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/banksampah/:id",
+                            "path": [
+                                "banksampah",
+                                ":id"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        }
+                    }
+                },
+                {
+                    "name": "getRecapPerPeriod",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:5500/banksampah/recap",
+                            "path": [
+                                "banksampah",
+                                "recap"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5500"
+                        },
+                        "header": [
+                            {
+                                "key": "PPKO-Ormawa-Mobile-Token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmE3YTI3NGVmMjExMzkwOGM5Yzc4NWEiLCJ1c2VybmFtZSI6InRlc3RhZG1pbmFub3JnYW5payIsInJvbGUiOiJBZG1pbi1Bbm9yZ2FuaWsiLCJpYXQiOjE3MjIyNzE1NzMsImV4cCI6MTcyMjI3NTE3MywiaXNzIjoiUFBLTy1Pcm1hd2EtTW9iaWxlIn0.PJcTWw4RrHhiENzel5cWI2yWy6fO2QWqwOqeg01RRt0"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
