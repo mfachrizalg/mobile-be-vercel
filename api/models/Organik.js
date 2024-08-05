@@ -14,7 +14,7 @@ const OrganikSchema = new mongoose.Schema({
         type : String
     },
     database64 : {
-        type : String
+        type : Buffer
     },
     kriteria : {
         type : String,
