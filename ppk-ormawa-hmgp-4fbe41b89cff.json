@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ppk-ormawa-hmgp",
+  "private_key_id": "4fbe41b89cffae0317f7abed62094fdc3816aae6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCXjEvzQUJWxKJZ\n+yup7v+cTY78Y1eaBa1Adk5aBOlfz3/m2UJpe57beRCtkee3owp+gLBkaI0XEEbS\ncu25OXDHaZn2M3staI6GPDc4g2e0XRaJ6wf8dweKo8CPhZFNHW8Ety0zUCjyeWnA\n9gje4NwqWr5UwulswtKWaZss/IduCkClA6lsfRrqFrwLwam9d4eyU/owBW8YPRY0\nJJhviYfMAJoL8q1I+g41AM7/vIT3Ol4vmCC/4ywQhBgtZHddJTHN7RYL4gvwPJyT\nmPZMCBFL26kPaoqDJjTlLVVcO7hYBJpjev5/fcv855wQzPnfe2RNvJGwoorBWdNl\n1kRjV0HTAgMBAAECggEASvdAvtVCXq+obAB+afJrCUOofpsZw3wZZvDe81LIqvd3\nGpfQbWOUgpbRtDqfuExzrX41Q4YgfQ81KXdmtyB99Hb9jTeMMDsvfaGd41vFWghO\nVO0ppy6uUVuNrrFw3ge4WknOlzqI9uEueiB65N2wq1b2HfHJDF8XUwZsl4VX7Qts\nGjoY8nWSFEOECjea1VWTi45jLO1PO9q6s0ZrZ26FVKqMXu9Xc1t7rerj5YVbDvZf\n9DXHj7fMMYE6Nmy5R0+oWenk4ueBgWnRy1NTbViVPFfT7Jw0SD9IVS0LkaqJpCS1\nCfqX1/dEvh0rh+ces/Z+GycjL2bifurClr94jpvX0QKBgQDQvJDIfP3p4fAFQ+BC\nt3mA2wDPZJIsX1Q8yrHjTEWn1FCkBOdYeFMSpwdZu7GH09AnkMrZqo+ew4v4oZzn\n6U6DZiFRNSE18+2FTowdjgODXe1+YHIJa1heLvPHkf4zdiXP/WzqsOjS3fXG3Bga\nupJvgirDjz/WLkcN2InoTsE5mQKBgQC53MqyBnrSCXkg4bSGkBvKO89Hu7lprMnf\n2PyVtd/De6YAzXTj20QNvsVdmrTG6vFfTpELT1sN7xdRKcJuDrcW8a89dATYmZlN\nMcoXOQfv/XJYiyKJ6vZyRXNPx75/8QlyVpSfAP4ymuoEm86uTZNxgEwVWoBLdNvg\n3sRer4eySwKBgAd87Di0+yrbtw+JSs8547ryoEnQUsoStWPk5ZLA1rLZk/b+UgpD\nbr95jHL0n76+o3X35L8ANly8qRXHPmi3XuCp1kIihMl5saiZk78vrAKXaQCilxSt\nbCMczhP3scXI1Dxs2+5jYEbIPZvfo2G6Fay4X65aQjD9wgDGJtRVlurpAoGAQyi9\n8WAYB0c3BqOn+Kuf7w53ksMJd17hP0qH0oz6gwdt74JOB3uWdqUFahJZ2jrQ5xBb\npsuQ6lMHiONfBye4Dslb+gevLJkr5NHl5UhNTvG03LvByjYlwRrJVP2nH1H4iOEy\nKNZSA/UoNGwcXa1YZr3mQB0ImLtsLDAyosgob0sCgYEAmukO8vpa16fvAAlbzwB6\nobKWlS2QRxdzJVBmOp5u611A6c9IV6mLEgmDlayAMDK3nzhXn9C8c0jeIHJWeMQS\njMpoO8qhvpYy4WMo6o5/ymFW/wUspuHS9gFEqKWYA/eMdNm5U+T8GGuWMCyitFPv\n2HCTUZFBMxmy6+Gc23CFmEk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mobile-app@ppk-ormawa-hmgp.iam.gserviceaccount.com",
+  "client_id": "115219783922461112458",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mobile-app%40ppk-ormawa-hmgp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

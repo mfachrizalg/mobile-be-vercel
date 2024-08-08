@@ -75,30 +75,3 @@ exports.riwayatOrganik = async (req, res) => {
     }
 }
 
-exports.sendImage = async (req, res) => {
-    try {
-        const { name , database64 } = req.body;
-        if (!name || !database64) return res.status(400).json({ message: "Please fill all fields" });
-
-        const organik = new Organik({
-            name,
-            database64,
-            date: Date.now() + 7 * 60 * 60 * 1000
-        });
-        await organik.save();
-        res.status(201).json({ message: "Organik created successfully" });
-    }
-    catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-}
-
-exports.getImage = async (req, res) => {
-    try {
-        const organik = await Organik.findOne();
-        res.status(200).json(organik.database64);
-    }
-    catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-}
