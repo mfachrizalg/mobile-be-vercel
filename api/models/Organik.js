@@ -13,8 +13,8 @@ const OrganikSchema = new mongoose.Schema({
     tanggal : {
         type : String
     },
-    image : {
-        type : String
+    database64 : {
+        type : Buffer
     },
     kriteria : {
         type : String,
