@@ -28,7 +28,7 @@ exports.getAllUsersOrganik = async (req, res) => {
                 path : 'users',
                 match : { role : 'Organik' },
                 options : {sort : {date : -1}},
-                select : 'username'
+                select : 'fullname date'
             });
         if (!banksampah) return res.status(404).json({ message: "No users found" });
         banksampah.users.forEach (user => {
